@@ -1,9 +1,12 @@
-import './App.css'
+import './App.css';
+import { useState } from 'react';
 function App() {
+  const [color, setColor] = useState("red");
+  const nextColor = color === "blue" ? "red" : "blue";
   return (
     <div>
-      <button className="red" onClick={() => {}}>
-        Blue
+      <button className={color} onClick={() => setColor(nextColor)} >
+        {nextColor}
       </button>
     </div>
   );
