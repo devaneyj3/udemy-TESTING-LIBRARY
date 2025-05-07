@@ -28,6 +28,16 @@ test('Checkbox flow', () => {
   expect(button).toBeEnabled();
   expect(checkbox).not.toBeChecked();
 
+  //click checkbox to disable button
+  fireEvent.click(checkbox);  
+  expect(checkbox).toBeChecked();
+  expect(button).toBeDisabled();
+  
+  //click checkbox to enable button
+  fireEvent.click(checkbox);  
+    expect(button).toBeEnabled();
+  expect(checkbox).not.toBeChecked();
+
 }
   );
 
