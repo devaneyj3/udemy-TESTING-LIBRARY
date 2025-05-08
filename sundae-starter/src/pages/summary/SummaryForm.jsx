@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
+import Options from "../entry/Options";
 
 export default function SummaryForm() {
   const [tcChecked, setTcChecked] = useState(false);
@@ -23,6 +24,8 @@ export default function SummaryForm() {
   );
 
   return (
+    <>
+
     <Form>
       <Form.Group controlId="terms-and-conditions">
         <Form.Check
@@ -30,11 +33,12 @@ export default function SummaryForm() {
           checked={tcChecked}
           onChange={(e) => setTcChecked(e.target.checked)}
           label={checkboxLabel}
-        />
+          />
       </Form.Group>
       <Button variant="primary" type="submit" disabled={!tcChecked}>
         Confirm order
       </Button>
     </Form>
+  </>
   );
 }
