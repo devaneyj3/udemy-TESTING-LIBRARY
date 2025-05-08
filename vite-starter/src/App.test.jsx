@@ -10,13 +10,13 @@ test("button click flow", () => {
     name: /blue/i,
   });
 
-  // expect the class to be red
+  // expect the class to be medium-violet-red
   expect(buttonElement).toHaveClass("medium-violet-red");
 
   // click button
   fireEvent.click(buttonElement);
 
-  // expect the class to be blue
+  // expect the class to be midnight-blue
   expect(buttonElement).toHaveClass("midnight-blue");
 
   // expect the button text to match /red/i
