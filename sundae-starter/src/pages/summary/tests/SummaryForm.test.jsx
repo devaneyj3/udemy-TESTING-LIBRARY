@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import SummaryForm from '../summary/SummaryForm';
+import { render, screen } from '../../../test-utils/testing-library-utils';
+import SummaryForm from '../SummaryForm';
 import  userEvent  from '@testing-library/user-event'
-import { userEventApi } from '@testing-library/user-event/dist/cjs/setup/api.js';
+
 
 test('Checkbox workflow', async () => {
   render(<SummaryForm />)
