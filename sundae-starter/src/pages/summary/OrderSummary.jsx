@@ -1,7 +1,7 @@
 import React from 'react'
 import SummaryForm from './SummaryForm'
 import { useOrderDetails } from '../../contexts/OrderDetails'
-import { formatCurrency } from '../../utillities'
+import { formatCurrency } from '../../utilities'
 
 export default function OrderSummary() {
   const { totals, optionCounts } = useOrderDetails()
